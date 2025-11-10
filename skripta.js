@@ -1,0 +1,5 @@
+// Forma za rezervacije (trenutno testna)
+document.getElementById("bookingForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  alert("Hvala! Vaš zahtev za rezervaciju je poslat. Uskoro ćemo vas kontaktirati.");
+});
