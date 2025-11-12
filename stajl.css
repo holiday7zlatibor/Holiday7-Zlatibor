@@ -54,7 +54,7 @@ section {
 }
 
 h2 {
-  color: #d2b48c; /* braon akcenat za sekcije */
+  color: #d2b48c; 
   text-align: center;
   margin-bottom: 20px;
 }
@@ -73,7 +73,7 @@ h2 {
   border-radius: 5px;
 }
 
-/* Galerija / Slider */
+/* Slider */
 .slajder {
   position: relative;
   max-width: 800px;
@@ -97,7 +97,7 @@ h2 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(210, 180, 140, 0.7); /* braon akcenat */
+  background-color: rgba(210, 180, 140, 0.7); 
   border: none;
   font-size: 30px;
   padding: 10px;
@@ -114,6 +114,7 @@ h2 {
   right: 10px;
 }
 
+/* Galerija hover */
 .gallery-container, .galerija {
   display: flex;
   flex-wrap: wrap;
@@ -132,7 +133,7 @@ h2 {
   box-shadow: 0 0 15px rgba(210,180,140,0.6);
 }
 
-/* Video sekcija */
+/* Video */
 .video {
   text-align: center;
   margin-top: 30px;
@@ -169,17 +170,17 @@ button:hover {
 }
 
 /* Recenzije */
-.review, .recenzija {
+.review {
   background: #222;
   padding: 20px;
   border-radius: 10px;
   margin: 15px 0;
   transition: transform 0.3s;
 }
-.review:hover, .recenzija:hover {
+.review:hover {
   transform: scale(1.02);
 }
-.review span, .recenzija strong {
+.review span {
   display: block;
   color: #ccc;
   margin-top: 10px;
