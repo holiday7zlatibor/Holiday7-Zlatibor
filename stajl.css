@@ -29,12 +29,13 @@ nav a {
   transition: color 0.3s;
 }
 nav a:hover {
-  color: #ffd700;
+  color: #d2b48c;
 }
 
+/* HERO sekcija sa slikom zzgrada.jpg */
 #hero {
-  background: url('hero.jpg') center/cover no-repeat;
-  height: 80vh;
+  background: url('slike/zzgrada.jpg') center/cover no-repeat;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,8 +44,9 @@ nav a:hover {
 
 .hero-text {
   background: rgba(0, 0, 0, 0.6);
-  padding: 20px 40px;
-  border-radius: 10px;
+  padding: 30px 50px;
+  border-radius: 12px;
+  color: #f1f1f1;
 }
 
 section {
@@ -54,23 +56,9 @@ section {
 }
 
 h2 {
-  color: #d2b48c; 
+  color: #d2b48c;
   text-align: center;
   margin-bottom: 20px;
-}
-
-.features {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 0;
-}
-.features li {
-  background: #222;
-  padding: 10px 15px;
-  border-radius: 5px;
 }
 
 /* Slider */
@@ -97,7 +85,7 @@ h2 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(210, 180, 140, 0.7); 
+  background-color: rgba(210, 180, 140, 0.7);
   border: none;
   font-size: 30px;
   padding: 10px;
@@ -114,22 +102,12 @@ h2 {
   right: 10px;
 }
 
-/* Galerija hover */
-.gallery-container, .galerija {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-.gallery-container img, .galerija img {
-  width: 280px;
-  height: 180px;
-  border-radius: 10px;
-  object-fit: cover;
+/* Hover efekat za slike */
+.gallery-container img, .slajder img {
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.gallery-container img:hover, .galerija img:hover {
-  transform: scale(1.05);
+.gallery-container img:hover, .slajder img:hover {
+  transform: scale(1.03);
   box-shadow: 0 0 15px rgba(210,180,140,0.6);
 }
 
@@ -145,7 +123,7 @@ h2 {
   border-radius: 10px;
 }
 
-/* Forme */
+/* Forma */
 form {
   display: flex;
   flex-direction: column;
@@ -159,14 +137,14 @@ input, textarea, button {
   border-radius: 5px;
 }
 button {
-  background-color: #ffd700;
+  background-color: #d2b48c;
   color: #000;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
 button:hover {
-  background-color: #e5c100;
+  background-color: #b89a6b;
 }
 
 /* Recenzije */
