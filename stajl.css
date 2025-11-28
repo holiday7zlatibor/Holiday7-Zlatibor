@@ -59,7 +59,7 @@ body {
 }
 .main-nav a:hover{color:var(--gold)}
 
-/* Nav toggle for mobile */
+/* Nav toggle */
 .nav-toggle{
   display:none;
   background:transparent;
@@ -68,7 +68,7 @@ body {
   font-size:22px;
 }
 
-/* HERO presečen na pola */
+/* HERO */
 .hero{
   display:flex;
   align-items:stretch;
@@ -97,7 +97,6 @@ body {
 }
 .hero-content h2 span{color:#fff}
 .hero-content p{color:var(--muted); margin-bottom:18px}
-
 .hero-cta{display:flex;gap:12px;margin:18px 0}
 .btn-primary, .btn-outline{
   display:inline-block;
@@ -108,12 +107,8 @@ body {
 }
 .btn-primary{background:var(--gold); color:#000}
 .btn-outline{border:2px solid rgba(210,180,140,0.14); color:var(--muted)}
-
-/* features in hero */
 .hero-features{display:flex;gap:12px;list-style:none;padding:0;margin:10px 0 0;color:var(--muted)}
 .hero-features li{font-size:14px}
-
-/* Right image */
 .hero-right img{
   width:100%;
   height:100%;
@@ -150,14 +145,6 @@ h2{color:var(--gold); text-align:center; margin-bottom:20px; font-family:'Playfa
 .video{display:flex;justify-content:center;margin-top:20px}
 .video video{width:100%;max-width:720px;border-radius:10px}
 
-/* Booking form */
-.booking-section{padding-bottom:40px}
-.booking-form{display:flex;flex-direction:column;gap:12px;max-width:700px;margin:0 auto}
-.date-row{display:flex;gap:10px}
-input, textarea{padding:12px;border-radius:8px;border:none;background:#0f0f0f;color:#eee}
-input:focus, textarea:focus{outline:2px solid rgba(210,180,140,0.2)}
-.booking-actions{display:flex;gap:10px;align-items:center}
-
 /* Reviews */
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .review-card{background:linear-gradient(180deg,#0f0f0f,#0b0b0b);padding:20px;border-radius:12px;border:1px solid rgba(255,215,0,0.04)}
@@ -189,7 +176,6 @@ input:focus, textarea:focus{outline:2px solid rgba(210,180,140,0.2)}
   .contact-grid{grid-template-columns:1fr}
   .header-inner{padding:12px}
 }
-/* Small devices */
 @media (max-width:420px){
   .brand{font-size:18px}
   .hero-content h2{font-size:22px}

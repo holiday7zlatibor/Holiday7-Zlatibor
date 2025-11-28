@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mainNav.style.gap = '12px';
   });
 
-  // Slider galerija - bolja kontrola, pauza na hover, touch support
+  // Slider galerija
   const slides = Array.from(document.querySelectorAll('.slide'));
   let current = 0;
   let intervalId = null;
@@ -26,72 +26,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function startAuto() {
     stopAuto();
-    intervalId = setInterval(() => {
-      showSlide(current + 1);
-    }, 5000);
+    intervalId = setInterval(() => showSlide(current + 1), 5000);
   }
+
   function stopAuto() {
     if (intervalId) clearInterval(intervalId);
   }
 
-  prevBtn.addEventListener('click', () => {
-    showSlide(current - 1);
-  });
-  nextBtn.addEventListener('click', () => {
-    showSlide(current + 1);
-  });
+  prevBtn.addEventListener('click', () => showSlide(current - 1));
+  nextBtn.addEventListener('click', () => showSlide(current + 1));
 
   slidesContainer.addEventListener('mouseenter', stopAuto);
   slidesContainer.addEventListener('mouseleave', startAuto);
 
-  // Touch / swipe support for mobile
+  // Touch / swipe support
   let startX = 0;
-  slidesContainer.addEventListener('touchstart', (e) => {
-    stopAuto();
-    startX = e.touches[0].clientX;
-  }, {passive:true});
+  slidesContainer.addEventListener('touchstart', (e) => { stopAuto(); startX = e.touches[0].clientX; }, {passive:true});
   slidesContainer.addEventListener('touchend', (e) => {
     const endX = e.changedTouches[0].clientX;
     const diff = endX - startX;
     if (Math.abs(diff) > 40) {
-      if (diff > 0) showSlide(current - 1);
-      else showSlide(current + 1);
+      diff > 0 ? showSlide(current - 1) : showSlide(current + 1);
     }
     startAuto();
   }, {passive:true});
 
-  // Start slider
-  showSlide(0);
-  startAuto();
-
-  // Booking form validation & simple UX
-  const bookingForm = document.getElementById("bookingForm");
-  bookingForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const from = document.getElementById('dateFrom').value;
-    const to = document.getElementById('dateTo').value;
-
-    if (!name || !email || !from || !to) {
-      alert('Molimo popunite obavezna polja.');
-      return;
-    }
-    if (new Date(from) > new Date(to)) {
-      alert('Datum odlaska mora biti posle datuma dolaska.');
-      return;
-    }
-
-    // Simulacija slanja — ovde možeš ubaciti fetch ka backendu ili service-u
-    alert("Hvala! Vaš zahtev za rezervaciju je poslat. Uskoro ćemo vas kontaktirati.");
-    bookingForm.reset();
-  });
-
-  // Accessibility: allow keyboard navigation on slider buttons
+  // Keyboard accessibility
   [prevBtn, nextBtn].forEach(btn => {
     btn.addEventListener('keyup', (e) => {
       if (e.key === 'Enter' || e.key === ' ') btn.click();
     });
   });
 
+  // Start slider
+  showSlide(0);
+  startAuto();
 });
