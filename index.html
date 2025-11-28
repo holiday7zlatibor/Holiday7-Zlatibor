@@ -4,20 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Holiday 7 Zlatibor — Luksuzan apartman na Zlatiboru</title>
-  <meta name="description" content="Holiday 7 Zlatibor — moderan i luksuzan apartman za do 4 osobe. Wellness, bazen, besplatan parking i predivan pogled na planinu." />
+  <meta name="description" content="Holiday 7 Zlatibor — moderan i luksuzan apartman za do 4 osobe. Wellness, bazen, besplatan parking i predivan pogled na planinu. Rezervišite odmah!" />
   <link rel="canonical" href="https://holiday7zlatibor.github.io/Holiday7-Zlatibor/" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Holiday 7 Zlatibor — Luksuzan apartman na Zlatiboru" />
+  <meta property="og:description" content="Holiday 7 Zlatibor — moderan i luksuzan apartman za do 4 osobe. Wellness, bazen, besplatan parking i predivan pogled na planinu." />
+  <meta property="og:image" content="https://holiday7zlatibor.github.io/Holiday7-Zlatibor/slike/zzgrada.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://holiday7zlatibor.github.io/Holiday7-Zlatibor/" />
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Holiday 7 Zlatibor",
+    "image": "https://holiday7zlatibor.github.io/Holiday7-Zlatibor/slike/zzgrada.jpg",
+    "telephone": "0659761616",
+    "email": "holiday7zlatibor@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Vlastimira Pavlovića bb",
+      "addressLocality": "Zlatibor",
+      "addressCountry": "RS"
+    },
+    "url": "https://holiday7zlatibor.github.io/Holiday7-Zlatibor/"
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="stajl.css">
   <script defer src="skripta.js"></script>
   <meta name="theme-color" content="#0a0a0a" />
 </head>
 <body>
-  <!-- Navigacija -->
+  <!-- Header / navigacija -->
   <header class="site-header">
     <div class="container header-inner">
       <h1 class="brand">Holiday<span class="brand-accent">7</span>Zlatibor</h1>
@@ -39,7 +66,7 @@
         <h2>Dobrodošli u <span>Holiday 7</span> — luksuz na Zlatiboru</h2>
         <p>Mir, elegancija i potpuni komfor za do 4 osobe. Wellness, bazen i besplatan parking.</p>
         <div class="hero-cta">
-          <a href="mailto:holiday7zlatibor@gmail.com?subject=Rezervacija Holiday 7" class="btn-primary">Pošalji mejl za rezervaciju</a>
+          <a href="#contact" class="btn-primary">Pošaljite upit</a>
           <a href="#contact" class="btn-outline">Kontakt</a>
         </div>
         <ul class="hero-features">
@@ -49,8 +76,7 @@
         </ul>
       </div>
     </div>
-
-    <div class="hero-right">
+    <div class="hero-right" aria-hidden="false">
       <picture>
         <source media="(min-width:1200px)" srcset="slike/zzgrada.jpg">
         <source media="(min-width:600px)" srcset="slike/terasa.jpg">
@@ -64,13 +90,12 @@
   <section id="about" class="container">
     <h2>O apartmanu</h2>
     <p class="lead">
-      Dobrodošli u <strong>Holiday 7 Zlatibor</strong> — moderan, luksuzan i udoban apartman u mirnom delu Zlatibora, idealan za odmor i opuštanje tokom cele godine.
+      Dobrodošli u <strong>Holiday 7 Zlatibor</strong> — moderan, luksuzan i udoban apartman koji se nalazi u mirnom delu Zlatibora.
     </p>
     <div class="about-grid">
       <div>
-        <p>Apartman je namenjen boravku do 4 osobe, sa spavaćom sobom koja ima bračni ležaj, dnevnim boravkom, potpuno opremljenom kuhinjom i terasom sa prelepim pogledom na planinu.</p>
-        <p>U objektu se nalazi wellness & spa centar, spoljni bazen, besplatan parking i Wi-Fi. Idealno za porodice, parove ili prijatelje koji traže mir i luksuzan smeštaj.</p>
-        <p>Gostima je obezbeđena kompletna oprema: posteljina, peškiri, pribor za kuvanje i sve što je potrebno za ugodan boravak.</p>
+        <p>Namenjen boravku do 4 osobe. Spavaća soba sa bračnim ležajem, dnevni boravak, potpuno opremljena kuhinja i terasa sa pogledom na planinu.</p>
+        <p>U sklopu objekta: wellness & spa centar, spoljni bazen, besplatan parking i Wi-Fi.</p>
       </div>
       <aside class="about-aside">
         <ul class="features">
@@ -110,10 +135,27 @@
     </div>
   </section>
 
-  <!-- Cene i dostupnost -->
+  <!-- Cene -->
   <section id="pricing" class="container">
     <h2>Cene i dostupnost</h2>
-    <p>Cene se razlikuju u zavisnosti od sezonskih termina i broja noći. Kontaktirajte nas putem mejla ili telefona za preciznu ponudu. Minimalni boravak je 2 noći. Weekend popusti su dostupni van glavne sezone.</p>
+    <p>Cena zavisi od termina i broja noći. Kontaktirajte nas za konkretne termine.</p>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="contact" class="container">
+    <h2>Kontakt</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>📞 Telefon: <strong><a href="tel:+381659761616">065 976 1616</a></strong></p>
+        <p>📧 Email: <strong><a href="mailto:holiday7zlatibor@gmail.com">holiday7zlatibor@gmail.com</a></strong></p>
+        <p>📍 Adresa: <strong>Vlastimira Pavlovića bb, Zlatibor</strong></p>
+      </div>
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps?q=Zlatibor,Vlastimira%20Pavlovica%20bb&output=embed"
+          width="100%" height="300" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
   </section>
 
   <!-- Recenzije -->
@@ -130,35 +172,6 @@
         <p>“Sve preporuke! Spa centar u sklopu zgrade je savršen.”</p>
         <footer>– <strong>Marko</strong>, Novi Sad</footer>
       </article>
-      <article class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>“Fenomenalan pogled sa terase i mirna lokacija.”</p>
-        <footer>– <strong>Jelena</strong>, Užice</footer>
-      </article>
-    </div>
-  </section>
-
-  <!-- Kontakt -->
-  <section id="contact" class="container">
-    <h2>Kontakt</h2>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <p>📞 Telefon: <strong><a href="tel:+381659761616">065 976 1616</a></strong></p>
-        <p>📧 Email: <strong><a href="mailto:holiday7zlatibor@gmail.com">holiday7zlatibor@gmail.com</a></strong></p>
-        <p>📍 Adresa: <strong>Vlastimira Pavlovića bb, Zlatibor</strong></p>
-        <p>📸 Instagram: <a href="https://www.instagram.com/holiday7zlatibor" target="_blank" rel="noopener">@holiday7zlatibor</a></p>
-        <p>🎵 TikTok: <a href="https://www.tiktok.com/@holiday.7.zlatibor" target="_blank" rel="noopener">@holiday.7.zlatibor</a></p>
-      </div>
-      <div class="contact-map">
-        <iframe
-          src="https://www.google.com/maps?q=Zlatibor,Vlastimira%20Pavlovica%20bb&output=embed"
-          width="100%"
-          height="300"
-          style="border:0"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
     </div>
   </section>
 
